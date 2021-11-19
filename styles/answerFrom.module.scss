@@ -1,0 +1,41 @@
+.container{
+    border: 1px solid rgba(0,0,0,0.2);
+    margin: 20px 0 0 -20px;
+    width: 685px;
+    height: 369px;
+    .div{
+        // display: flex;
+        // flex-wrap: wrap;
+
+        // margin: 1px 0 0 0;
+        font-size: 14px;
+        line-height: 16px;
+
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        // border: 1px solid green;
+    }
+    
+}
+.grid_container{
+margin: 0 0 0 10px;
+display: grid;
+grid-template-columns: 202px 423px;
+grid-template-rows: 16px;
+}
+.article{
+margin: 0 0 10px 10px;
+width:350px;
+height:21px;
+font-weight: 400;
+font-size: 18px;
+
+}
+.payee_username{
+    height: 33px;
+    font-size: 14px;
+    line-height: 16px;
+
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+}
