@@ -5,12 +5,13 @@ import { Spinner } from "./spinner"
 import { NotFound } from "./notFound"
 import { LogoSVG } from './logoSVG';
 import { AnswerForm } from "./answerForm"
+import {UIN,data} from '../types/types'
 
 export const FindForm = () => {
     const FETCH_URL = process.env.NEXT_PUBLIC_FETCH_URL
-    const [findUIN,setFindUIN] = useState('')
-    const [dataOutput, setDataOutput] =  useState({})
-    const inputRef  = useRef()
+    const [findUIN,setFindUIN] = useState<any | undefined>()
+    const [dataOutput, setDataOutput] =  useState <any | undefined>()
+    const inputRef  = useRef<any | undefined>()
     const [isLoading,setIsLoading] = useState(false)
     const [empty,setEmpty] = useState(true)
     console.log('process.env.NEXT_PUBLIC_FETCH_URL',process.env.NEXT_PUBLIC_FETCH_URL)
@@ -42,11 +43,13 @@ export const FindForm = () => {
             <button className="find__button" onClick={findByUIN}>Найти</button>
             </div>
             {isLoading ? <Spinner /> : <></>}
-            {(dataOutput && !empty) ? <NotFound UIN={findUIN}/> : <AnswerForm data={dataOutput} UIN={findUIN} />}
+            {(!dataOutput && !empty) ? <NotFound UIN={findUIN}/> : <></>}
+            {(dataOutput && !empty) ? <AnswerForm data={dataOutput} UIN={findUIN}/>  : <></>}
 
             {/* <Spinner />
             <NotFound UIN={findUIN}/> */}
             {/* <AnswerForm data={dataOutput} UIN={findUIN}/> */}
+            <NotFound UIN={findUIN}/>
         </div>
         </>
     )

@@ -35,9 +35,15 @@ a {
   font-weight: 400;
 }
 .find__input{
+  -webkit-appearance: none;
   width:403px;
   height: 35px;
   border: 1px solid rgba(151, 151, 151, 1);
+}
+.find__input::-webkit-outer-spin-button,
+.find__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 .find__button{
   background-color:  rgba(99, 197, 86, 1);

@@ -1,6 +1,12 @@
 import styles from '../styles/answerFrom.module.scss'
+import React, { FC } from "react";
 
-export const AnswerForm = ({data,UIN}) => {
+interface Props {
+    data : any,
+    UIN : any
+}
+
+export const AnswerForm : FC<Props> = ({data,UIN}) => {
     return (
         <div className={styles.container}>
             <p className={styles.article}>Постановление # {UIN}</p>
