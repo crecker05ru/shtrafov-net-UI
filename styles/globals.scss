@@ -52,4 +52,15 @@ a {
   height: 35px;
   border: none;
   margin-left: 11px;
+  transition: ease 1s;
+  cursor:pointer;
+}
+
+.find__button[disabled]{
+  background-color:  rgb(152, 187, 147);
+  transition: ease 1s;
+  cursor:default;
+}
+.error-text{
+  color:red;
 }
