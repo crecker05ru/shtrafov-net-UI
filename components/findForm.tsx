@@ -22,7 +22,7 @@ export const FindForm = () => {
     const findByUIN = async () => {
         setIsLoading(true)
         // const response = await fetch(`${process.env.NEXT_PUBLIC_FETCH_URL}/${findUIN}`)
-        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}fences/0356043010119111100023005`)
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}fines/0356043010119111100023005`)
         const data = await response.json()
         setIsLoading(false)
         setDataOutput(data)
